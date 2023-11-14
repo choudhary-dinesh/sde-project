@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Summarization</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="header">
+        <h1>News Summarization Web App</h1>
+    </div>
+    <div class="container">
+    <form id="text-form">
+        <label for="input_text">Enter News Article:</label>
+        <textarea id="input_text" name="input_text" rows="10" cols="80"></textarea>
+        <br>
+        <input type="submit" value="Summarize">
+    </form>
+    <div id="result" class="result-box"></div>
+    </div>
+    <div class="footer">
+        <p>SDE Project by Satish Chilloji (M22AIE242) & Dinesh Kumar (M22AIE227)</p>
+    </div>
+
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#text-form").submit(function(event) {
+                event.preventDefault();
+                var inputText = $("#input_text").val();
+                $.ajax({
+                    type: "POST",
+                    url: "/process_text",
+                    data: { input_text: inputText },
+                    success: function(data) {
+                        $("#result").text(data.processed_text);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

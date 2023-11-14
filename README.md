@@ -1,2 +1,2 @@
 # sde-project
-News Aggregation and Summarization Platform
+News Summarization Web App
