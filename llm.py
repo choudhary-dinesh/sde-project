@@ -3,7 +3,7 @@ import openai
 import json
 import time
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def get_completion(prompt, model="gpt-3.5-turbo-1106"):
