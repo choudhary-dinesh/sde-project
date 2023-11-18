@@ -14,8 +14,6 @@ Held a detailed discussion on realizing the full potential of our strategic part
 Also exchanged views on the situation in West Asia,… pic.twitter.com/guxyCxLuRM
 
 — Dr. S. Jaishankar (@DrSJaishankar) November 13, 2023
- 
- #
 “Also exchanged views on the situation in West Asia, the Ukraine conflict and the Indo-Pacific,” he said.
 
 """
@@ -35,4 +33,4 @@ def process_text():
     return jsonify({'processed_text': processed_text})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host = "0.0.0.0", port = "80", debug=True)
