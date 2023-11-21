@@ -1,2 +1,2 @@
 # sde-project
-News Summarization Web App
+News/Content Summarization Web App
